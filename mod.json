@@ -1,0 +1,11 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081"
+	},
+	"version": "v1.2.0",
+	"id": "bigbycicleboy.inputbuffer",
+	"name": "Input Buffer",
+	"developer": "bigbycicleboy",
+	"description": "Trajectory based frame press and wave release input buffer"
+}
