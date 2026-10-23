@@ -662,7 +662,7 @@ namespace ibuf
 
             if (pickedDelay > 0)
             {
-                log::info("BufferInputs] {} {} delayed {} ticks ({:.2f} frames @ 240 TPS) | base {} -> {} ticks survived [cap: {}]",
+                log::info("[BufferInputs] {} {} delayed {} ticks ({:.2f} frames @ 240 TPS) | base {} -> {} ticks survived [cap: {}]",
                     who, verb, pickedDelay, pickedDelay / 4.0f, base, pickedFrames, maxDelay);
                 L.queuedDown = down;
                 L.delayCounter = pickedDelay;
@@ -765,6 +765,8 @@ namespace ibuf
             m_cubeDelayLimit = p.cubeDelay;
             m_waveDelayLimit = p.waveDelay;
             log::info("{}", p.label);
+
+            Notification::create(p.label, NotificationIcon::None, 1.5f)->show();
         }
 
         bool isSimulating() const { return m_simRunning; }
