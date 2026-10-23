@@ -14,10 +14,10 @@ This means a click that would have clipped a spike by a frame can get nudged by 
 
 ## Features
 
-- **Trajectory-based press buffering** — looks ahead before committing to a click
+- **Trajectory based click buffering** — looks ahead before committing to a click
 - **Dual mode support** — handles both dual and two-player dual, where each player gets its own simulation
-- **Rapid-click bypass for wave** — spam clicking in wave falls back to raw input so it doesn't feel weird or delayed
-- **Adjustable buffer strength** — cycle through presets with a hotkey to change how far ahead it's allowed to delay
+- **Spam click bypass for wave** — spam clicking in wave falls back to raw input so it doesn't feel weird or delayed
+- **Adjustable buffer Length** — cycle through presets with a hotkey to change how far ahead it's allowed to delay
 
 ## Controls
 
