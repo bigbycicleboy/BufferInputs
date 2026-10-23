@@ -55,11 +55,11 @@ namespace ibuf
 
     constexpr ModeConfig kModeTable[] =
     {
-        { true,   2,  2, "[InputBuffer] (2 ticks All | 2 ticks Wave)" },
-        { true,   4,  4, "[InputBuffer] (4 ticks All | 4 ticks Wave)" },
-        { true,   8,  8, "[InputBuffer] (8 ticks All | 8 ticks Wave)" },
-        { true,  16,  8, "[InputBuffer] (16 ticks All | 8 ticks Wave)" },
-        { false,  0,  0, "[InputBuffer] (OFF)" },
+        { true,   2,  2, "[BufferInputs] (2 ticks All | 2 ticks Wave)" },
+        { true,   4,  4, "[BufferInputs] (4 ticks All | 4 ticks Wave)" },
+        { true,   8,  8, "[BufferInputs] (8 ticks All | 8 ticks Wave)" },
+        { true,  16,  8, "[BufferInputs] (16 ticks All | 8 ticks Wave)" },
+        { false,  0,  0, "[BufferInputs] (OFF)" },
     };
     constexpr int kModeCount = static_cast<int>(std::size(kModeTable));
 
@@ -662,7 +662,7 @@ namespace ibuf
 
             if (pickedDelay > 0)
             {
-                log::info("[InputBuffer] {} {} delayed {} ticks ({:.2f} frames @ 240 TPS) | base {} -> {} ticks survived [cap: {}]",
+                log::info("BufferInputs] {} {} delayed {} ticks ({:.2f} frames @ 240 TPS) | base {} -> {} ticks survived [cap: {}]",
                     who, verb, pickedDelay, pickedDelay / 4.0f, base, pickedFrames, maxDelay);
                 L.queuedDown = down;
                 L.delayCounter = pickedDelay;
