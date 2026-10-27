@@ -31,7 +31,7 @@ Press **F5** while in a level to cycle through presets:
 | 4 | 16 | 8 |
 | 5 | Off | Off |
 
-The current preset is printed to the Geode console when you switch it
+The current preset is printed to the Geode console when you switch it or shown as a notification in game
 
 ## Compatibility
 
