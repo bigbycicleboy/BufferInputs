@@ -7,5 +7,13 @@
 	"id": "bigbycicleboy.bufferinputs",
 	"name": "Buffer Inputs",
 	"developer": "bigbycicleboy",
-	"description": "Press and wave release input buffer"
+	"description": "Press and wave release input buffer",
+	"settings": {
+		"awesomeness-level": {
+			"name": "Show Notification",
+			"description": "Shows a notifcation on screen when you cycle the mode",
+			"type": "bool",
+			"default": true
+		}
+	}
 }

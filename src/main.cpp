@@ -771,10 +771,14 @@ namespace ibuf
             if (m_notif)
             {
                 m_notif->cancel();
+                m_notif = nullptr;
             }
 
-            m_notif = Notification::create(p.label, NotificationIcon::None, 1.5f);
-            m_notif->show();
+            if (Mod::get()->getSettingValue<bool>("Show Notification"))
+            {
+                m_notif = Notification::create(p.label, NotificationIcon::None, 0.75f);
+                m_notif->show();
+            }
         }
 
         bool isSimulating() const { return m_simRunning; }
