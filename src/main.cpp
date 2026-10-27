@@ -21,9 +21,9 @@ using namespace geode::prelude;
 
 namespace ibuf
 {
-    constexpr int   kSpamGapFrames = 8;
-    constexpr int   kSpamStreakCap = 3;
-    constexpr int   kNoInputMark = 999;
+    constexpr int kSpamGapFrames = 8;
+    constexpr int kSpamStreakCap = 3;
+    constexpr int kNoInputMark = 999;
     constexpr float kFallbackDt = 0.25f;
 
     constexpr int kTopPriority = -1000000;
@@ -47,9 +47,9 @@ namespace ibuf
 
     struct ModeConfig
     {
-        bool        enabled;
-        int         cubeDelay;
-        int         waveDelay;
+        bool enabled;
+        int  cubeDelay;
+        int  waveDelay;
         const char* label;
     };
 
@@ -140,6 +140,8 @@ namespace ibuf
 
     class Predictor
     {
+        Ref<Notification> m_notif;
+
         struct Controlled
         {
             bool drivesP1 = false;
@@ -766,7 +768,13 @@ namespace ibuf
             m_waveDelayLimit = p.waveDelay;
             log::info("{}", p.label);
 
-            Notification::create(p.label, NotificationIcon::None, 1.5f)->show();
+            if (m_notif)
+            {
+                m_notif->cancel();
+            }
+
+            m_notif = Notification::create(p.label, NotificationIcon::None, 1.5f);
+            m_notif->show();
         }
 
         bool isSimulating() const { return m_simRunning; }

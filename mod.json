@@ -4,8 +4,8 @@
 		"win": "2.2081"
 	},
 	"version": "v1.2.0",
-	"id": "bigbycicleboy.inputbuffer",
-	"name": "Input Buffer",
+	"id": "bigbycicleboy.bufferinputs",
+	"name": "Buffer Inputs",
 	"developer": "bigbycicleboy",
-	"description": "Trajectory based frame press and wave release input buffer"
+	"description": "Press and wave release input buffer"
 }
