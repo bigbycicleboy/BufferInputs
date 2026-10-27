@@ -774,7 +774,7 @@ namespace ibuf
                 m_notif = nullptr;
             }
 
-            if (Mod::get()->getSettingValue<bool>("Show Notification"))
+            if (Mod::get()->getSettingValue<bool>("show-notifcation"))
             {
                 m_notif = Notification::create(p.label, NotificationIcon::None, 0.75f);
                 m_notif->show();

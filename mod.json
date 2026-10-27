@@ -9,7 +9,7 @@
 	"developer": "bigbycicleboy",
 	"description": "Press and wave release input buffer",
 	"settings": {
-		"awesomeness-level": {
+		"show-notifcation": {
 			"name": "Show Notification",
 			"description": "Shows a notifcation on screen when you cycle the mode",
 			"type": "bool",
